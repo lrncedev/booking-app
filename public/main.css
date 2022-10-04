@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,900&display=swap');
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1.4;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  /* outline: 1px solid white; */
+}
+
+
+/* Header Styles */ 
+header, footer {
+  background-color: black;
+  color: white;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5em;
+}
+
+.btn {
+  margin-inline: .4em;
+  padding: .4em;
+  border-radius: 4px;
+  font-weight: 900;
+}
+
+.btn-link {
+  border: 1px solid white;  
+  color: white;
+}
+
+.sign-in:hover {
+  color: black;
+  background-color: white;
+}
+
+.sign-up {
+  background-color: #063970;
+}
+
+.sign-up:hover {
+  color: #063970;
+  background-color: white;
+}
+
+/* Main Styles */
+main {
+  height: 100vh;
+} 
+
+
+/* Footer Styles */ 
+footer {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5em 1em;
+}
+
+.github{
+  color: white;
+}
+.tech-stack{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer ul {
+  display: flex;
+  gap: .3rem;
+}
