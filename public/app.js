@@ -1,5 +1,5 @@
-// const signIn = document.getElementById('sign-in');
+const cards = document.querySelectorAll('.card');
 
-// signIn.addEventListener('click', () => {
-//   alert('Yellow');
-// })
+cards.forEach(card => card.addEventListener('click', (e)=> {
+  console.log(e.currentTarget);
+}))

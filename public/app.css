@@ -5,3 +5,59 @@
 .bg-gray {
   background-color: #eee;
 }
+
+.card {
+  margin-bottom: .5em;
+  transition: scale 1s;
+}
+
+.card:hover {
+  scale: 1.05;
+}
+
+.sign-in-container{
+  background: url("https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.grid {
+  display: grid;
+  height: 87vh;
+  grid-template-columns: 1fr 2fr;
+}
+
+
+.login-form {
+  background-color: white;
+  border-top-right-radius: 25px;
+  opacity: .764;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom-right-radius: 25px;
+}
+.actual-form {
+  display: flex;
+  flex-direction: column;
+  gap: .2em;
+  text-transform: uppercase;
+}
+
+.body-container {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  gap: 3em;
+}
+
+.sign-up-container {
+  height: 50vh;
+  align-items: center;
+  justify-content: center;
+}
+
