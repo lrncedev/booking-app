@@ -61,3 +61,10 @@
   justify-content: center;
 }
 
+/* .list-grid {
+  display: grid:
+  grid-template-columns: 1fr 1fr;
+} */
+.listingImage {
+  width: 100%;
+}
