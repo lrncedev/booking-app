@@ -1,0 +1,26 @@
+GET http://localhost:3000/listings
+
+###
+GET http://localhost:3000/listings/63423344493724cc21db9b5f
+
+###
+
+POST http://localhost:3000/listings
+Content-Type: application/json
+
+{
+  "listingName": "Kiwi Hotel",
+  "userName": "kiwihotel123",
+  "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit."
+}
+
+###
+DELETE http://localhost:3000/listings/63423344493724cc21db9b5f
+
+###
+PATCH http://localhost:3000/listings/63423344493724cc21db9b5f
+Content-Type: application/json
+
+{
+  "listingName": "Bali Hotel"
+}
