@@ -15,22 +15,14 @@
   <%- include('partials/header') %> 
   <div class="container bg-white my-5 px-4 py-4">
     <h1><%= listing.listingName %> </h1>
-    <!-- <div class="row">
-      <div class="col-sm"> 
-        <img src="https://www.holidify.com/images/bgImages/BALI.jpg" alt="" srcset="" class="listingImage">
-      </div>
-      <div class="col-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores laudantium a qui illum.</div>
-    </div> -->
     <div class="row">
       <div class="col">
         <img src="https://www.holidify.com/images/bgImages/BALI.jpg" alt="" srcset="" class="listingImage">
       </div>
       <div class="col">
-        <h2>Description</h2>
-        <h2>Description</h2>
-        <h2>Description</h2>
-        <h2>Description</h2>
-        <h2>Description</h2>
+        <p>Uploaded By: <mark>@<%= listing.userName %></mark></p>
+        <h3><%= listing.description %></h3>
+        <h4><%= listing.address%></h4>
       </div>
     </div>
   </div>

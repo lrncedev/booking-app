@@ -11,7 +11,7 @@ Content-Type: application/json
 {
   "listingName": "Kiwi Hotel",
   "userName": "kiwihotel123",
-  "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit."
+  "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
 }
 
 ###
@@ -23,4 +23,14 @@ Content-Type: application/json
 
 {
   "listingName": "Bali Hotel"
+}
+
+###
+
+POST http://localhost:3000/listings/signup
+Content-Type: application/json
+
+{
+  "userName": "user",
+  "password": "pass"
 }
