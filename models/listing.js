@@ -18,6 +18,7 @@ const listingSchema = new mongoose.Schema({
     required: true,
     default: Date.now
   },
+  
 })
 
 module.exports = mongoose.model('Listing', listingSchema);

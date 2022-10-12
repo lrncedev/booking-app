@@ -1,21 +1,74 @@
 const express = require('express');
 const router = express.Router();
-const Listing = require('../models/listing')
+const Listing = require('../models/listing');
+const User = require('../models/user');
+
 
 // GET ALL listings
 router.get('/', async (req,res) => {
   try {
     const listings = await Listing.find()
     // res.json(listings)
-    res.render('index', { listings });
+    res.render('index', { listings, title: "Booking App"});
     
   } catch (error) {
     res.status(500).json({message: error.message})
   }
 })
-  // router.get('/signin', (req,res)=> {
-  //   res.render('signin');
-  // })
+
+
+// Sign In 
+// router.get('/signin', (req,res)=> {
+//   res.render('signin');
+// })
+
+// router.get('/signup', (req,res)=> {
+//   res.render('signup');
+// })
+
+// Dashboard
+// router.post('/dashboard', (req, res) => {
+//   let userName = req.body.userName;
+//   let password = req.body.password;
+
+//   /* INCOMPLETE BUT WORKING */
+//   try {
+//     const getUser = User.findOne({userName: userName, password: password}, (err, user) => {
+//       if(err) {
+        
+//         return;
+//       }
+//       if (user) {
+//         // console.log(getUser);
+//         res.render('dashboard', {getUser, title: "Dashboard"})
+//       } else {
+//         console.log("there is no user");
+//       }
+//     });
+//   } catch (error) {
+//     res.status(400).json({message: error.message});
+//   }
+  
+// })
+
+
+
+
+//Sign up 
+router.post('/signup', async (req, res) => {
+  const user = new User({
+    userName: req.body.userName,
+    password: req.body.password
+  })
+
+  try {
+    const newUser = await user.save();
+    res.status(201).json(newUser)
+  } catch (error) {
+    res.status(400).json({message: error.message});
+  }
+})
+
 
 
   // GET ONE listing
@@ -35,6 +88,7 @@ router.post('/', async (req,res) => {
 
   try {
     const newListing = await listing.save()
+    console.log(newListing);
     res.status(201).json(newListing)
   } catch (error) {
     res.status(400).json({message: error.message});
