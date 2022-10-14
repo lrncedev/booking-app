@@ -22,7 +22,7 @@ const userSchema = new mongoose.Schema({
 //Toggler for Logged in and Logged out
 userSchema.methods.toggleLoggedIn = function() {
   this.isLoggedIn = !this.isLoggedIn;
-  // return this.save();
+  return this.save();
 }
 
 
