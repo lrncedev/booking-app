@@ -1,0 +1,15 @@
+<%- include('partials/head') %> 
+<%- include('partials/header') %> 
+<main class="bg-container">
+  <div class="login-bg"></div>
+  <div class="">
+    <form action="/login" autocomplete="off" class="form-user" method="post">
+      <label for="Username">Username</label>
+      <input type="text" name="userName" id="Username" required>
+      <label for="Password">Password</label>
+      <input type="password" name="password" id="Password" required>
+      <input type="submit" class="btn btn-primary" value="Sign In">
+    </form>
+  </div>
+</main>
+<%- include('partials/foot') %> 

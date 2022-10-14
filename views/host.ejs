@@ -1,0 +1,20 @@
+<%- include('partials/head') %> 
+  <div class="spread container">
+    <h1 class=" my-4">HOST YOUR BNB</h1>
+    <a href="javascript:history.back()" class="btn btn-info text-white">Back</a>
+  </div>
+  <div class="container mt-4 w-50">
+    <form action="/hostBnb" method="post" class="actual-form" autocomplete="off">
+      <label for="listingName">Name of Hotel</label>
+      <input type="text" name="listingName" id="listingName" required>
+      <label for="userName">Uploaded by</label>
+      <input type="text" name="userName" id="userName" required>
+      <label for="description">Description</label>
+      <input type="text" name="description" id="description" required>
+      <label for="address">Address</label>
+      <input type="text" name="address" id="description" required>
+      <!-- ADD MAP-->
+      <!-- ADD REVIEWS-->
+      <input type="submit" class="btn btn-primary" value="Be a host">
+    </form>
+  </div>

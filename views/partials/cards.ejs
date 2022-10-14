@@ -1,0 +1,14 @@
+<div class="flex-card container">
+  <% for (listing of listings) {%> 
+    <div class="card" style="width: 18rem;">
+      <img src="https://www.holidify.com/images/bgImages/BALI.jpg" class="card-img-top" alt="Hotel Image">
+      <div class="card-body">
+        <h5 class="card-title text-danger"><%= listing.listingName %> </h5>
+        <p class="card-text"><%= listing.address %></p>
+        <span class="text-warning"><%= listing.userName %></span>
+        <p class="card-text mt-none"><%= listing.description %></p>   
+        <a href="/listings/<%= listing._id %>" class="btn btn-info w-100 text-white">Check this out</a>
+      </div>
+    </div>
+  <% } %> 
+</div>
