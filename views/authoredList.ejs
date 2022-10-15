@@ -32,8 +32,12 @@
   <% } %> 
   </div>
   <div class="container py-2 ">
-    <textarea id="" name="" class="w-100" placeholder="Add a review here..."> </textarea>
-    <a href="" class="btn btn-dark text-white mt-3">Add review</a>
+    <form action="/listings/<%= listing._id %>/addReview?_method=PUT" method="post">
+      <textarea id="" name="review" class="w-100" placeholder="Add a review here..." required> </textarea>
+      <input type="submit" value="Add review" class="btn btn-dark">
+    </form>
+    
+
   </div>
 
 <%- include('partials/foot') %> 

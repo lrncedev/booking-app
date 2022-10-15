@@ -1,6 +1,7 @@
 //Dependecies
 require('dotenv').config()
 
+//DATABASE_URL=mongodb://localhost/bookingApp on .env file
 const express = require('express');
 const session = require('express-session');
 const methodOverride  = require('method-override');
@@ -80,7 +81,7 @@ app.get('/dashboard', async(req,res) => {
     return res.redirect('/');
   }
   const listings = await Listing.find();
-  return res.render('dashboard', {title: "test", listings});
+  return res.render('dashboard', {title: "Dashboard", listings});
 }) 
 
 
@@ -88,10 +89,22 @@ app.get('/listings', async(req,res) => {
   // const listings = await Listing.find();
   if(!req.session.user) {
     const listings = await Listing.find();
-    res.render('landing', {title: "Available hotels", listings});
+    return res.render('landing', {title: "Available hotels", listings});
   }
   const listings = await Listing.find();
-  res.render('listings', {title: "Available Hotels", listings})
+  return res.render('listings', {title: "Available Hotels", listings})
+})
+
+
+app.put('/listings/:id/addReview', async(req,res) => {
+  const id = req.params.id;
+  const review = req.body.review;
+
+  console.log(review);
+  const listing = await Listing.findByIdAndUpdate(id, 
+    { $push: { reviews: review } }
+  )
+  res.redirect('/dashboard');
 })
 
 //GET ONE HOTEL
